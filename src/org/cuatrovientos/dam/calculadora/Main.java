@@ -63,10 +63,10 @@ public class Main {
 				if (num2 == 0) {
 					System.out.println("El divisor no puede ser 0. Intenta nuevamente.");
 				}
-			} while (num2 == 0);
+			} while (num2 != 0);
 		}else {
 			num2 = leerNumero(scan, "Ingresa el segundo número: ");
-
+		}
 		System.out.println("\nEl resultado de la " + operacion + " es: " + op.calcular(num1, num2) + "\n\n");
 	}
 
@@ -74,7 +74,7 @@ public class Main {
 	private static double leerNumero(Scanner scan, String mensaje) {
 		System.out.print(mensaje);
 		while (!scan.hasNextDouble()) {
-			System.out.println("Entrada no válida. Por favor, ingresa un número válido.");
+			System.out.println("Entrada no válida. Por favor, ingresa un número válido. ");
 			scan.next();
 			System.out.print(mensaje);
 		}
